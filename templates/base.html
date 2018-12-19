@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+
+	<title>Item Catalog</title>
+
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body>
+	<div>
+		<header>
+			<div class="container">
+				<table style="width:100%">
+					<tr>
+						<th>
+						<a href="/">
+							<h1 class="top">Catalog App</h1>
+						</a>
+						</th>
+						<th>
+							{%if 'username' not in session %}
+							<a href="{{url_for('showLogin')}}">
+								<h4>Login</h4>
+							</a>
+							{% else %}
+							<a href="{{url_for('logout')}}">
+								<h4>Logout</h4>
+							</a>
+							{% endif %}
+						</th>
+					</tr>
+				</table>
+			</div>
+		</header>
+	<div>
+			<div>
+				{% block content %}
+				{% endblock %}
+			</div>
+		</div>
+	</div>
+</body>
+</html>

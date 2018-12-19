@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+
+<table class="main">
+	<tr>
+		<th>Categories</th>
+		<th>Latest Items</th>
+	</tr>
+	<tr>
+		<td>
+			<ul>
+				{% for category in categories %}
+					<a href="{{url_for('showCategory', catalog_id = category.id )}}">
+						<li class="items__item">
+							<span>{{category.name}}</span>
+						</li>
+					</a>
+				{% endfor %}
+			</ul>
+		</td>
+		<td>
+			<ul>
+				{% for categoryItem in categoryItems %}
+					<a href="{{url_for('showCategoryItem', catalog_id = categoryItem.category_id ,item_id = categoryItem.id )}}">
+						<li class="items__item">
+							<span>{{categoryItem.name}}</span>
+							<span class="item__type">({{categoryItem.category.name}})</span>
+						</li>
+					</a>
+				{% endfor %}
+			</ul>
+		</td>
+	</tr>
+</table>
+
+
+{% if 'username' in session %}
+	<br /><br />
+	<div style="text-align:center">
+		<a href="{{url_for('addCategoryItem')}}">Add Item</a>
+	</div>
+{% endif %}
+
+
+{% endblock %}

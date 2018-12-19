@@ -1,0 +1,76 @@
+* {
+	font-family: "Helvetica Neue Bold", Roboto, Helvetica, Arial, sans-serif;
+	font-weight: 700;
+}
+
+ul {
+	list-style-type: none;
+
+}
+
+body{
+	background-color: LightGray;
+
+}
+.items__item{
+	color: red;
+}
+
+.item__type{
+	color: black;
+}
+.item_name{
+	color: #3333cc;
+}
+
+.main {
+
+  border-collapse: collapse;
+	align-self: center;
+	background-color: white;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 30px;
+	width: 50em;
+	height: auto;
+	text-align: left;
+}
+
+.container{
+	background-color: #141452;
+
+}
+
+.top{
+	color: white;
+}
+th{
+	color: #3333cc;
+}
+a{
+	color: red;
+	text-decoration: none;
+}
+.content{
+	margin-top: 30px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: white;
+	text-align: center;
+	width: 20em;
+	height: auto;
+	text-
+}
+.edit_item{
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #e6f2ff;
+	text-align: center;
+}
+h2{
+	text-align: center;
+	color: #ffff1a;
+}
+.alert{
+	color: blue;
+}
